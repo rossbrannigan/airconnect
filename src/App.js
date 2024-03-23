@@ -1,22 +1,42 @@
-import React, { useEffect } from 'react';
-import './App.css';
-import airconnectImage from './images/airconnect.svg'; // Path to the image
-import ReactGA from 'react-ga';
+import React from 'react';
+import airconnectLogo from './images/ac-logo.svg'; // Changed image source
 
 function App() {
-  useEffect(() => {
-    ReactGA.initialize('G-0PBTF2YNYG');
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={airconnectImage} alt="AirConnect" />
-        <p>
-          Welcome to AirConnect!
-        </p>
-      </header>
+    <div className="flex flex-col min-h-screen">
+      {/* Navbar */}
+      <nav className="bg-white shadow-md">
+        <div className="container mx-auto flex justify-between items-center py-4 px-8">
+          <div>
+            <img src={airconnectLogo} alt="Airconnect Logo" className="h-12" />
+          </div>
+          <div className="flex">
+            <a href="#" className="text-gray-800 hover:text-gray-600 py-2 px-4">About Us</a>
+            <a href="#" className="text-gray-800 hover:text-gray-600 py-2 px-4">Investors</a> {/* Added Investors Link */}
+            <a href="#" className="text-gray-800 hover:text-gray-600 py-2 px-4">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      {/* Main Content */}
+      <div className="flex flex-col items-center justify-center flex-1 bg-gray-200 text-gray-700">
+        <div className="max-w-lg py-8">
+          <h1 className="text-4xl font-bold mb-4 text-center">Welcome to Airconnect</h1>
+          <p className="text-lg mb-8 text-center">Your Web3 Ticket to the World</p>
+          {/* Signup Form */}
+          <form className="flex flex-col items-center">
+            <input type="email" placeholder="Enter your email to get on the waitlist" className="w-full border-gray-300 rounded-md py-2 px-4 mb-4" /> {/* Changed placeholder */}
+            <button type="submit" className="bg-purple-600 text-white rounded-md py-2 px-6 hover:bg-purple-700">Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white py-8">
+        <div className="container mx-auto text-center">
+          <p className="text-sm">&copy; {new Date().getFullYear()} Airconnect. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
