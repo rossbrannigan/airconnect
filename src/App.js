@@ -11,9 +11,9 @@ function App() {
             <img src={airconnectLogo} alt="Airconnect Logo" className="h-12" />
           </div>
           <div className="flex">
-            <a href="#" className="text-gray-800 hover:text-gray-600 py-2 px-4">About Us</a>
-            <a href="#" className="text-gray-800 hover:text-gray-600 py-2 px-4">Investors</a> {/* Added Investors Link */}
-            <a href="#" className="text-gray-800 hover:text-gray-600 py-2 px-4">Contact</a>
+            <button className="text-gray-800 hover:text-gray-600 py-2 px-4">About Us</button>
+            <button className="text-gray-800 hover:text-gray-600 py-2 px-4">Investors</button> {/* Changed to button */}
+            <button className="text-gray-800 hover:text-gray-600 py-2 px-4">Contact</button> {/* Changed to button */}
           </div>
         </div>
       </nav>
