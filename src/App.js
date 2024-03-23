@@ -8,7 +8,7 @@ function App() {
       <nav className="bg-white shadow-md">
         <div className="container mx-auto flex justify-between items-center py-4 px-8">
           <div>
-            <img src={airconnectLogo} alt="Airconnect Logo" className="h-12" />
+            <img src={airconnectLogo} alt="Airconnect Logo" className="h-20 w-auto" /> {/* Increased height */}
           </div>
           <div className="flex">
             <button className="text-gray-800 hover:text-gray-600 py-2 px-4">About Us</button>
@@ -24,7 +24,7 @@ function App() {
           <h1 className="text-4xl font-bold mb-4 text-center">Welcome to Airconnect</h1>
           <p className="text-lg mb-8 text-center">Your Web3 Ticket to the World</p>
           {/* Signup Form */}
-          <form className="flex flex-col items-center">
+          <form className="flex flex-col items-center" netlify> {/* Added netlify attribute */}
             <input type="email" placeholder="Enter your email to get on the waitlist" className="w-full border-gray-300 rounded-md py-2 px-4 mb-4" /> {/* Changed placeholder */}
             <button type="submit" className="bg-purple-600 text-white rounded-md py-2 px-6 hover:bg-purple-700">Sign Up</button>
           </form>
@@ -42,3 +42,4 @@ function App() {
 }
 
 export default App;
+
